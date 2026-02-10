@@ -1,0 +1,25 @@
+{
+  "title": "Azure Architecture Proposal",
+  "functional_requirements": [
+    "Users can submit architecture requests through a web portal.",
+    "System generates architecture documents automatically."
+  ],
+  "non_functional_requirements": [
+    "Support 99.9% availability.",
+    "Protect sensitive input data at rest and in transit."
+  ],
+  "architecture_overview": "The solution uses a web UI, API layer, orchestration service, and document generation worker.",
+  "high_level_solution_summary": "Requests flow from the portal to an API, which triggers orchestration and persists generated DOCX artifacts.",
+  "capability_matrix": [
+    {
+      "capability": "Request intake",
+      "component": "Web Portal",
+      "notes": "React front-end"
+    },
+    {
+      "capability": "Document assembly",
+      "component": "Document Worker",
+      "notes": "Python service"
+    }
+  ]
+}
