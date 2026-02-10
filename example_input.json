@@ -1,0 +1,23 @@
+{
+  "title": "Azure Solution Architecture",
+  "functional_requirements": [
+    "Allow teams to submit architecture requests.",
+    "Generate architecture guidance documents."
+  ],
+  "non_functional_requirements": [
+    "End-to-end generation under 60 seconds.",
+    "Support 99.9% service availability."
+  ],
+  "architecture_overview": "A modular service exposes an API and assembles architecture artifacts.",
+  "high_level_solution_summary": "The assistant validates input, composes sections, maps capabilities to components, and exports DOCX.",
+  "capability_matrix": [
+    {
+      "capability": "Input validation",
+      "components": ["API layer", "Validation engine"]
+    },
+    {
+      "capability": "Document export",
+      "components": ["Document assembler", "DOCX packaging module"]
+    }
+  ]
+}
